@@ -4,4 +4,4 @@ navbar:
   title: "data investigations"
   left:
     - text: "icow"
-      href: icow_investigation.html
+      href: icow_exploration.html
