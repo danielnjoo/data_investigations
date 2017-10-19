@@ -1,0 +1,7 @@
+name: "dnjoo-data"
+output_dir: "."
+navbar:
+  title: "data investigations"
+  left:
+    - text: "icow"
+      href: icow_investigation.html
