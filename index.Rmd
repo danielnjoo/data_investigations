@@ -6,15 +6,15 @@ title: ""
 
 ##What is this? 
 
-Hi! I'm Daniel, a sophomore CS/Stats student at Amherst College. This is a quick GitHub-hosted website, I'm using to share data exploration and visualisation projects.
+Hi! I'm Daniel, a sophomore CS/Stats student at Amherst College. This is a quick GitHub-hosted website, which I'm using to share data exploration and visualisation projects.
 
-Main website [here](danielnjoo.com)
+Main website: [here](danielnjoo.com)
 
 <br>
 
 ##Current projects
 
-* [icow](/icow_exploration.html): relationships between certain country-level socio-economic variables and Date of Independence, ex-colonial ruler, etc.
+* [icow](/data_investigations/icow/icow_exploration.html): relationships between certain country-level socio-economic variables and Date of Independence, ex-colonial ruler, etc.
 
 <br>
 

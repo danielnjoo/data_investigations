@@ -1,9 +1,11 @@
 name: "dnjoo-data"
 output_dir: "."
 navbar:
-  title: "data investigations"
+  title: "Data Investigations"
   left:
-    - text: "Home"
-      href: index.html
     - text: "icow"
-      href: icow_exploration.html
+      href: ./icow/icow_exploration.html
+output:
+  html_document:
+    theme: flatly
+    css: style.css

@@ -1,0 +1,78 @@
+---
+title: "mass shootings"
+author: "Daniel Njoo"
+date: "11/7/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(cache = T)
+```
+
+```{r}
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+setwd('/Users/danielnjoo/Desktop/data_investigations/massshooting/')
+d2013<-read.csv('./MST Data 2013 - 2015.csv')
+d2014<-read.csv('./MST Data 2014 - 2015.csv')
+d2015<-read.csv('./MST Data 2015 - 2015.csv')
+d2016<-read.csv('./Mass Shooting Data 2016 - 2016.csv')
+d2017<-read.csv('./Mass Shooting Data 2017 - 2017.csv')
+```
+
+```{r}
+dfull<-rbind(d2013,d2014,d2015,d2016,d2017)
+```
+
+
+```{r}
+dfull$week <- week(mdy(dfull$date))
+dfull$year <- year(mdy(dfull$date))
+dfull$week2 <- as.Date(paste(dfull$year, dfull$week, 1, sep="-"), "%Y-%U-%u")
+dfull$label <- emoji('cow')
+dfull %>% group_by(week2, year) %>% summarise(killed=sum(killed)) %>% ggplot(aes(week2, killed)) + geom_point() 
+```
+
+```{r}
+library(rvest)
+country_deaths <- read_html('https://web.archive.org/web/20171030193452/https://en.wikipedia.org/wiki/List_of_countries_by_firearm-related_death_rate')
+```
+
+```{r}
+country_deaths %>%  html_table()  %>% .[[3]] -> temp
+temp$Country <- lapply(temp$Country, function (x) unlist(strsplit(x, '[ !]'))[1])
+temp[19,'Country'] <- "El Salvador"; temp[71,'Country'] <- "United States"
+temp %>% ggplot(aes(as.numeric(`Guns per 100 inhabitants`), as.numeric(`Firearm-related deaths per gun per year`))) + geom_point() + geom_text(data=subset(temp, as.numeric(`Firearm-related deaths per gun per year`) > 0.0015 | as.numeric(`Guns per 100 inhabitants`) > 32), nudge_y = 0.0003, aes(as.numeric(`Guns per 100 inhabitants`), as.numeric(`Firearm-related deaths per gun per year`), label=unlist(Country))) + ggtitle('gun ownership vs firearm-related deaths') + xlab('guns per 100 inhabitants') + ylab('fire-arm related deaths per gun per year')
+```
+
+But we're plotting$\frac{deaths}{guns*year}$ against guns/100 people, or $100*\frac{guns}{inhabitants}$, which isn't a fair plot to make. Case in point, if a country has high gun ownership, e.g. the United States then said country's rate of deaths per gun owned will be reduced. 
+
+A more fair plot might be $\frac{deaths}{person*year}$ against $\frac{guns}{person}$. 
+
+We can get this by multiplying our initial x by $\frac{guns}{100*inhabitants}$ and 
+dividing our initial y by 100.
+
+```{r}
+temp$
+```
+
+
+
+
+country_deaths %>%  html_table() -> temp
+temp[[3]] %>% ggplot(aes(as.numeric(`Guns per 100 inhabitants`), as.numeric(`Firearm-related deaths per gun per year`))) + geom_point()
+
+
+```{r}
+#emojifont? https://cran.r-project.org/web/packages/emojifont/vignettes/emojifont.html+
+  # geom_text(
+  #   aes(
+  #     x = week2,
+  #     y = killed,
+  #     label = emoji('cow')))
+```
