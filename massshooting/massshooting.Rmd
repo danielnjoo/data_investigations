@@ -21,7 +21,7 @@ library(reshape2)
 
 ```{r data, echo=F}
 # data
-setwd('/Users/danielnjoo/Desktop/data_investigations/massshooting/')
+# setwd('/Users/danielnjoo/Desktop/data_investigations/massshooting/')
 d2013<-read.csv('./MST Data 2013 - 2015.csv')
 d2014<-read.csv('./MST Data 2014 - 2015.csv')
 d2015<-read.csv('./MST Data 2015 - 2015.csv')
@@ -92,7 +92,7 @@ dfull %>%
 dfull %>% arrange(dateF) %>% head(1) %>% .[[1]] %>% as.Date(format="%m/%d/%Y") -> first.date
 dfull %>% arrange(dateF) %>% tail(1) %>% .[[1]] %>% as.Date(format="%m/%d/%Y") -> last.date
 dfull %>% 
-  filter(dateF<'2017-11-01') %>% 
+  filter(dateF<'2017-11-14') %>% 
   group_by(month2) %>% 
   summarise(count=n()) %>% 
   ggplot(aes(month2, count)) + 
@@ -191,6 +191,7 @@ dfull %>% inner_join(ownership_and_states)-> dfull
 dfull %>% arrange(desc(dateF)) %>% select(city, date, killed, wounded, state, `ownership rate`) %>% head()
 ```
 
+
 ### Total incidents per state mapped with gun ownership levels
 
 ```{r ownership2, echo=F}
@@ -205,7 +206,7 @@ dfull %>%
 
 ```
 
-Note in this case color and size both map `ownership level` (yes that's confusing and not good practice!), but using only one aesthetic resulted in an even more confusing graph. It's interesting to note here that no clear pattern emerges, i.e. wouldn't you expect all the lighter-colored, and larger spots/states to have more incidents?... wait don't states differ by population?
+Note in this case color and size both map `ownership level` (yes that's confusing and not good practice!), but using only one aesthetic resulted in an even more confusing graph. It's interesting to note here that no clear pattern emerges, i.e. wouldn't you expect all the lighter-colored, and larger spots/states (with higher ownership rates) to have more incidents?... wait don't states differ by population?
 
 Let's normalize for population, using 2016 population data from Wikipedia... (code in Appendix)
 
@@ -232,7 +233,7 @@ dfull <- dfull %>%
 dfull <- dfull %>% 
   mutate(
     pop16 = as.numeric(gsub(",", "", dfull$pop16)), 
-    totalOwners = as.numeric(`ownership rate`) * pop16) 
+    totalOwners = as.numeric(`ownership rate`) * pop16 / 100) 
 
 ```
 
@@ -248,7 +249,7 @@ dfull %>%
 
 ... so let's try that previous graph again:
 
-### Total incidents per state mapped with (normalized) gun ownership estimates
+### Total incidents per state mapped with total number of gun owners
 
 ```{r ownership5, echo=F}
 #ownership5
@@ -258,9 +259,30 @@ dfull %>%
   ggplot(aes(state,total, col=totalOwners, size=totalOwners)) +
     geom_point() +
     theme(axis.text.x = element_text(angle=90, vjust=0.5,hjust=1)) + 
-    ggtitle("Incidents per state mapped with (normalized) gun ownership estimates")
+    ggtitle("Incidents per state mapped with total number of gun owners")
 
 ```
+
+What we've mapped above is the total number of shootings per state with the number of total gunowners (calculated via ownership rate * population) colored in. We see a clearer trend between the number of gun owners and incidents here.
+
+If we don't plot the states on the X-axis, we can get an even clearer picture of the relationship between the number of guns in a state and the number of incidents, below I plot the total number of shooting casualties.:
+
+### Total casualties (wounded or killed) per state vs. total gun owners
+
+```{r ownership6, echo=F}
+#ownership6
+temp <- dfull %>% 
+  group_by(totalOwners, state) %>% 
+  summarise(total=sum(killed+wounded)) 
+temp %>% 
+  ggplot(aes(totalOwners, total)) +
+    geom_point() +
+    geom_point(data=subset(temp, total>500), col='red', size=2) +
+    geom_text(data=subset(temp, total>500),  label = subset(temp, total>500)$state, nudge_y=15) 
+
+```
+
+
 
 # Appendix
 ```{r, ref.label=knitr::all_labels(),echo=TRUE,eval=FALSE}
