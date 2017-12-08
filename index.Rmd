@@ -15,6 +15,14 @@ Main website: [here](danielnjoo.com)
 ##Current projects
 
 * [icow](/data_investigations/icow/icow_exploration.html): relationships between certain country-level socio-economic variables and Date of Independence, ex-colonial ruler, etc.
+* [shootings](/data_investigations/massshooting/massshooting.html): visualizing 5-years of violent shootings in the USA
+
+<br>
+
+##Quick Visualizations
+
+![global chinese diaspora](/data_investigations/visualizations/gcd.png)
+[code](/data_investigations/visualizations/gcd.r)
 
 <br>
 
