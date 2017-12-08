@@ -12,6 +12,7 @@ oc <- oc %>% filter(Overseas.Chinese.population!='')
 world <- map_data("world")
 world <- world[world$region != "Antarctica",] # intercourse antarctica
 
+# centroid source http://gothos.info/resource_files/country_centroids.zip
 centroids<-read.csv("./country_centroids/country_centroids_all.csv",  header=T, sep="\t")
 
 oc$Overseas.Chinese.population <- parse_number(oc$Overseas.Chinese.population)
