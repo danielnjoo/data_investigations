@@ -22,7 +22,7 @@ Main website: [here](danielnjoo.com)
 ##Quick Visualizations
 
 ![global chinese diaspora](/data_investigations/visualizations/gcd.png)
-[code](/data_investigations/visualizations/gcd.r)
+[code](/data_investigations/visualizations/gcd.R)
 
 <br>
 
