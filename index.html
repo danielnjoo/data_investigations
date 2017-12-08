@@ -20,8 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -30,10 +30,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -179,9 +181,6 @@ $(document).ready(function () {
         <li>
   <a href="./icow/icow_exploration.html">icow</a>
 </li>
-<li>
-  <a href="./massshooting/massshooting.html">shootings</a>
-</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -208,9 +207,14 @@ $(document).ready(function () {
 <div id="current-projects" class="section level2">
 <h2>Current projects</h2>
 <ul>
-<li><p><a href="/data_investigations/icow/icow_exploration.html">icow</a>: relationships between certain country-level socio-economic variables and Date of Independence, ex-colonial ruler, etc.</p></li>
-<li><p><a href="/data_investigations/massshooting/massshooting.html">shootings</a>: visualizing 5-years of violent shootings in the USA</p></li>
+<li><a href="/data_investigations/icow/icow_exploration.html">icow</a>: relationships between certain country-level socio-economic variables and Date of Independence, ex-colonial ruler, etc.</li>
+<li><a href="/data_investigations/massshooting/massshooting.html">shootings</a>: visualizing 5-years of violent shootings in the USA</li>
 </ul>
+<p><br></p>
+</div>
+<div id="quick-visualizations" class="section level2">
+<h2>Quick Visualizations</h2>
+<p><img src="/data_investigations/visualizations/gcd.png" alt="global chinese diaspora" /> <a href="/data_investigations/visualizations/gcd.r">code</a></p>
 <p><br></p>
 <p>–</p>
 <p><br></p>
