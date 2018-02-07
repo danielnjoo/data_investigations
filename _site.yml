@@ -5,6 +5,8 @@ navbar:
   left:
     - text: "icow"
       href: ./icow/icow_exploration.html
+    - text: "shootings"
+      href: ./massshooting/massshooting.html
 output:
   html_document:
     theme: flatly
