@@ -8,12 +8,15 @@ title: ""
 
 Hi! I'm Daniel, a sophomore CS/Stats student at Amherst College. This is a quick GitHub-hosted website, which I'm using to share data exploration and visualisation projects.
 
-Main website: [here](danielnjoo.com)
+Main website: [here](https://www.danielnjoo.com)
 
 <br>
 
-##Current projects
-
+##Past projects
+* [Drug References in Songs](https://www.kaggle.com/danielnjoo/drug-mentions-in-popular-music?scriptVersionId=8059320): quick Kaggle kernel on a lyrics dataset of top100 songs 1965-2015  
+* [Datafest 2018 presentation](/data_investigations/other/teamPval>9000.pdf): work done for DataFest 2018, an exploration of a  job listing platform's data
+* [ICO visualization](https://danielnjoo.shinyapps.io/ico-viz/): a Shiny app for visual exploration of some features of all ICOs as of 25.1.18 that had raised more than $10MM
+* [Twitter personality](https://danielnjoo.shinyapps.io/shiny/): a Shiny app built for STAT231: Data Science, that visualizes the features of an existing dataset (n=3000) with matched personality scores and Twitter usage stats, and tries to predict the type of a new Twitter user via KNN-defined types using KNN-matching, technical appendix [here](/data_investigations/other/technical_appendix)
 * [icow](/data_investigations/icow/icow_exploration.html): relationships between certain country-level socio-economic variables and Date of Independence, ex-colonial ruler, etc.
 * [shootings](/data_investigations/massshooting/massshooting.html): visualizing 5-years of violent shootings in the USA
 
@@ -22,7 +25,7 @@ Main website: [here](danielnjoo.com)
 ##Quick Visualizations
 
 ![global chinese diaspora](/data_investigations/visualizations/gcd.png)
-[code](/data_investigations/visualizations/gcd.R)
+[code](/data_investigations/visualizations/gcd.txt)
 
 <br>
 
