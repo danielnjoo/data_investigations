@@ -6,7 +6,7 @@ title: ""
 
 ##What is this? 
 
-Hi! I'm Daniel, a sophomore CS/Stats student at Amherst College. This is a quick GitHub-hosted website, which I'm using to share data exploration and visualisation projects.
+Hi! I'm Daniel, a junior CS/Stats student at Amherst College. This is a quick GitHub-hosted website, which I'm using to share data exploration and visualisation projects.
 
 Main website: [here](https://www.danielnjoo.com)
 
