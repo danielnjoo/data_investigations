@@ -13,6 +13,7 @@ Main website: [here](https://www.danielnjoo.com)
 <br>
 
 ##Past projects
+* [Election Contributions 2010-2016](https://www.kaggle.com/danielnjoo/exploration/forks?scriptVersionId=8092550): another Kaggle kernel on FEC contributions
 * [Drug References in Songs](https://www.kaggle.com/danielnjoo/drug-mentions-in-popular-music?scriptVersionId=8059320): quick Kaggle kernel on a lyrics dataset of top100 songs 1965-2015  
 * [Datafest 2018 presentation](/data_investigations/other/teamPval>9000.pdf): work done for DataFest 2018, an exploration of a  job listing platform's data
 * [ICO visualization](https://danielnjoo.shinyapps.io/ico-viz/): a Shiny app for visual exploration of some features of all ICOs as of 25.1.18 that had raised more than $10MM
