@@ -16,10 +16,14 @@ Last updated: October 2020
 
 ##Past projects
 [Election Contributions 2010-2016](https://www.kaggle.com/danielnjoo/exploration/forks?scriptVersionId=8092550)  (2018): Kaggle kernel on FEC contributions
+
 [Drug References in Songs](https://www.kaggle.com/danielnjoo/drug-mentions-in-popular-music?scriptVersionId=8059320) (2018): Kaggle kernel on a lyrics dataset of top100 songs 1965-2015  
+
 [Teaching Statistics at Google Scale](/data_investigations/other/TAS) (April 2018): presentation given in STAT370: Theoretical Statistics to explain the eponymous paper [Chamandy et al. (2015)](https://arxiv.org/abs/1508.01278) in 5 minutes
+
 [ICO visualization](https://danielnjoo.shinyapps.io/ico-viz/) (January 2018): Shiny app for visual exploration of some features of all ICOs as of 25.1.18 that had raised more than $10MM
-[Twitter personality](https://danielnjoo.shinyapps.io/shiny/) (2017): Shiny app built in STAT231: Data Science, that visualizes the features of an existing dataset (n=3000) with matched personality scores and Twitter usage stats, and tries to predict the type of a new Twitter user via KNN-defined types using KNN-matching, [technical appendix] (/data_investigations/other/technical_appendix)
+
+[Twitter personality](https://danielnjoo.shinyapps.io/shiny/) (2017): Shiny app built in STAT231: Data Science, that visualizes the features of an existing dataset (n=3000) with matched personality scores and Twitter usage stats, and tries to predict the type of a new Twitter user via KNN-defined types using KNN-matching, [technical appendix](/data_investigations/other/technical_appendix)
 
 <br>
 <br>
