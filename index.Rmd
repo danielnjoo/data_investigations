@@ -6,32 +6,25 @@ title: ""
 
 ##What is this? 
 
-Hi! I'm Daniel, a junior CS/Stats student at Amherst College. This is a quick GitHub-hosted website, which I'm using to share data exploration and visualisation projects.
+Hi! I'm Daniel, a senior Stats/CS student at Amherst College (expected graduation date: May 2021). This is a quick GitHub-hosted website, which I'm using to share data sciencey stuff.
 
 Main website: [here](https://www.danielnjoo.com)
+
+Last updated: October 2020
 
 <br>
 
 ##Past projects
-* [Election Contributions 2010-2016](https://www.kaggle.com/danielnjoo/exploration/forks?scriptVersionId=8092550): another Kaggle kernel on FEC contributions
-* [Drug References in Songs](https://www.kaggle.com/danielnjoo/drug-mentions-in-popular-music?scriptVersionId=8059320): quick Kaggle kernel on a lyrics dataset of top100 songs 1965-2015  
-* [Datafest 2018 presentation](/data_investigations/other/teamPval>9000.pdf): work done for DataFest 2018, an exploration of a  job listing platform's data
-* [ICO visualization](https://danielnjoo.shinyapps.io/ico-viz/): a Shiny app for visual exploration of some features of all ICOs as of 25.1.18 that had raised more than $10MM
-* [Twitter personality](https://danielnjoo.shinyapps.io/shiny/): a Shiny app built for STAT231: Data Science, that visualizes the features of an existing dataset (n=3000) with matched personality scores and Twitter usage stats, and tries to predict the type of a new Twitter user via KNN-defined types using KNN-matching, technical appendix [here](/data_investigations/other/technical_appendix)
-* [icow](/data_investigations/icow/icow_exploration.html): relationships between certain country-level socio-economic variables and Date of Independence, ex-colonial ruler, etc.
-* [shootings](/data_investigations/massshooting/massshooting.html): visualizing 5-years of violent shootings in the USA
+[Election Contributions 2010-2016](https://www.kaggle.com/danielnjoo/exploration/forks?scriptVersionId=8092550)  (2018): Kaggle kernel on FEC contributions
+[Drug References in Songs](https://www.kaggle.com/danielnjoo/drug-mentions-in-popular-music?scriptVersionId=8059320) (2018): Kaggle kernel on a lyrics dataset of top100 songs 1965-2015  
+[Teaching Statistics at Google Scale](/data_investigations/other/TAS) (April 2018): presentation given in STAT370: Theoretical Statistics to explain the eponymous paper [Chamandy et al. (2015)](https://arxiv.org/abs/1508.01278) in 5 minutes
+[ICO visualization](https://danielnjoo.shinyapps.io/ico-viz/) (January 2018): Shiny app for visual exploration of some features of all ICOs as of 25.1.18 that had raised more than $10MM
+[Twitter personality](https://danielnjoo.shinyapps.io/shiny/) (2017): Shiny app built in STAT231: Data Science, that visualizes the features of an existing dataset (n=3000) with matched personality scores and Twitter usage stats, and tries to predict the type of a new Twitter user via KNN-defined types using KNN-matching, [technical appendix] (/data_investigations/other/technical_appendix)
 
 <br>
-
-##Quick Visualizations
-
-![global chinese diaspora](/data_investigations/visualizations/gcd.png)
-[code](/data_investigations/visualizations/gcd.txt)
-
+<br>
 <br>
 
---
+##Extra
 
-<br>
-
-Advice on how to painlessly create such a website for *free* [here](http://nickstrayer.me/RMarkdown_Sites_tutorial/)
+How to painlessly create RMarkdown sites like this [here](http://nickstrayer.me/RMarkdown_Sites_tutorial/)
